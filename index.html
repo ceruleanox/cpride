@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camp Pride</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div class="home" id="home">
+        <h1><span class="lavender">We</span><span class="baby-blue">lc</span><span class="brown">ome</span> to <span class="red">C</span><span class="orange-red">a</span><span class="orange">m</span><span class="yellow">p</span> <span class="yellow-green">P</span><span class="green">r</span><span class="blue">i</span><span class="blue-violet">d</span><span class="purple">e</span>!</h1>
+        <div class="mascot">
+            <img src="img/mascot.png" alt="pride mascot">
+        </div>
+        <button id="toCabin" class="button" onClick="load_walk('loader_left','home','cabin','left')" alt="view scrapbook and write letters">Memories & Reflections</button>
+        <button id="toEscapeRoom" class="button" onClick="load_walk('loader_left','home','escape_room','left')" alt="embark on mission to rescue camp mascot">Escape Room Activity</button>
+        <button id="toMusic" class="button" onClick="load_walk('loader_right','home','enjoy_music','right')" alt="listen to music">Music to Our Ears</button>
+        <button id="toFireworks" class="button" onClick="load_walk('loader_right','home','fireworks_celebration','right')" alt="celebrate wins by setting off fireworks">Fireworks Celebration</button>
+        <button id="toCampfire" class="button" onClick="load_walk('loader_right','home','campfire_chatroom','right')" alt="sit around campfire to chat and share stories">Campfire Chats</button>
+
+        <button id="mountain" class="button_clear" alt="Go Tell It On the Mountain by James Baldwin"></button>
+        <button id="cook" class="button_clear" alt="Tim Cook"></button>
+
+
+    </div>
+
+    <div class="loader-left" id="loader_left">
+        <img src="img/walk_left.gif" alt="walking to destination">
+    </div>
+    <div class="loader-right" id="loader_right">
+        <img src="img/walk_right.gif" alt="walking to destination">
+    </div>
+    <div class="cabin" id="cabin">
+        <h1>cabin</h1>
+    </div>
+    <div class="escape-room" id="escape_room">
+        <h1>escape room</h1>
+    </div>
+    <div class="enjoy-music" id="enjoy-_music">
+        <h1>music</h1>
+    </div>
+    <div class="fireworks-celebration" id="fireworks_celebration">
+        <h1>fireworks</h1>
+    </div>
+    <div class="campfire-chatroom" id="campfire_chatroom">
+        <h1>campfire</h1>
+    </div>
+    
+</body>
+</html>

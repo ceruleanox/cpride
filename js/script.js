@@ -1,14 +1,12 @@
 function load_walk(load, p1, p2) { 
 
-    console.log( "000" + load + " " + p1 + p2 + direction);
-
     var loader = document.getElementById(String(load));
     var page1 = document.getElementById(String(p1));
     var page2 = document.getElementById(String(p2));
 
-    console.log( "first" + load + " " + p1 + p2 + direction);
+    console.log( "first" + load + " " + p1 + p2);
 
-    console.log( "second" + loader + " " + p1 + p2 + direction);
+    console.log( "second" + loader + " " + p1 + p2);
 
     if (load === 'loader_left') {
         loader.style.left = "0";
@@ -20,9 +18,9 @@ function load_walk(load, p1, p2) {
     }
 
     setTimeout(function() { 
-        if (direction === 'left') {
+        if (load === 'loader_left') {
             loader.style.left = "-100%";
-        } else if (direction === 'right') {
+        } else if (load === 'loader_right') {
             loader.style.left = "0";
         } else {
             loader.style.opacity = "1";

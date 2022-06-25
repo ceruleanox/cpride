@@ -134,6 +134,12 @@ h1 {
     color: brown;
 }
 
+#home_footer {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    margin-top: 280px;
+}
+
 /******************  SCAVENGER  ***********************/
 
 .button_clear {
@@ -160,6 +166,35 @@ h1 {
     left: 208px;
     width: 70px;
     height: 30px;
+}
+
+#violet {      
+    top: 260px;
+    left: 395px;
+    width: 50px;
+    height: 50px;
+}
+
+#donut {      
+    border-radius: 50px;
+    top: 465px;
+    left: 500px;
+    width: 138px;
+    height: 90px;
+}
+
+#black_cat {
+    top: 170px;
+    left: 620px;
+    width: 60px;
+    height: 120px;
+}
+
+.black-cat img {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    max-width: 50%;
 }
 
 /* background-color:rgba(1,1,1,.5); */
@@ -196,15 +231,23 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+/******************  CABIN  ***********************/
+
   
 .cabin {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: #b1f6ff;
+    color: black;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 800px; 
+    height: 800px;
+    background-size: 700px 600px;
+    background-image: url('img/bg_cabin.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
   
 .cabin h1 {
@@ -221,6 +264,16 @@ h1 {
     color: white;
     cursor: pointer;
 }
+
+#scrapbook {      
+    /*background-color:rgba(1,1,1,.5);*/
+    top: 505px;
+    left: 210px;
+    width: 190px;
+    height: 80px;
+    transform:rotate(-15deg);
+}
+
 
 /*
 

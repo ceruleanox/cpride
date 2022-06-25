@@ -1,4 +1,4 @@
-function load_walk(load, p1, p2) { 
+function load_page(load, p1, p2) { 
 
     var loader = document.getElementById(String(load));
     var page1 = document.getElementById(String(p1));
@@ -27,6 +27,6 @@ function load_walk(load, p1, p2) {
         }
         page1.style.display = "none";
         page2.style.display = "block";
-     }, 1500)
+     }, 200)
  }
 

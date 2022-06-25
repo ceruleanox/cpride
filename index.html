@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Camp Pride</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/33276862fa.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
+    <script src="js/flipbook.js" defer></script>
+    <script src="js/fireworks.js" defer></script>
+
 </head>
 <body>
     <div class="home" id="home">
@@ -14,15 +18,17 @@
         <div class="mascot">
             <img src="img/mascot.png" alt="pride mascot">
         </div>
-        <button id="toCabin" class="button" onClick="load_walk('loader_left','home','cabin','left')" alt="view scrapbook and write letters">Memories & Reflections</button>
-        <button id="toEscapeRoom" class="button" onClick="load_walk('loader_left','home','escape_room','left')" alt="embark on mission to rescue camp mascot">Escape Room Activity</button>
-        <button id="toMusic" class="button" onClick="load_walk('loader_right','home','enjoy_music','right')" alt="listen to music">Music to Our Ears</button>
-        <button id="toFireworks" class="button" onClick="load_walk('loader_right','home','fireworks_celebration','right')" alt="celebrate wins by setting off fireworks">Fireworks Celebration</button>
-        <button id="toCampfire" class="button" onClick="load_walk('loader_right','home','campfire_chatroom','right')" alt="sit around campfire to chat and share stories">Campfire Chats</button>
+        <button id="toCabin" class="button" onClick="load_page('loader_left','home','cabin')" alt="view scrapbook and write letters">Memories & Reflections</button>
+        <button id="toEscapeRoom" class="button" onClick="load_page('loader_left','home','escape_room')" alt="embark on mission to rescue camp mascot">Escape Room Activity</button>
+        <button id="toMusic" class="button" onClick="load_page('loader_right','home','enjoy_music')" alt="listen to music">Music to Our Ears</button>
+        <button id="toFireworks" class="button" onClick="load_page('loader_right','home','fireworks_celebration')" alt="celebrate wins by setting off fireworks">Fireworks Celebration</button>
+        <button id="toCampfire" class="button" onClick="load_page('loader_right','home','campfire_chatroom')" alt="sit around campfire to chat and share stories">Campfire Chats</button>
 
         <button id="mountain" class="button_clear" alt="Go Tell It On the Mountain by James Baldwin"></button>
-        <button id="cook" class="button_clear" alt="Tim Cook"></button>
-
+        
+        <!--
+            <button id="cook" class="button_clear" alt="Tim Cook"></button>
+        -->
         <p id="home_footer">Click around with your mouse to explore camp, starting with the directional arrows on the guiding post! </p>
 
     </div>
@@ -33,20 +39,160 @@
     <div class="loader-right" id="loader_right">
         <img src="img/walk_right.gif" alt="walking to destination">
     </div>
+
     <div class="cabin" id="cabin">
 
         <div class="black-cat">
             <img src="img/black_cat_clock.gif">
         </div>
-        
-        <button id="scrapbook" class="button_clear" alt="View Album"></button>
+        <div class="back-home">
+            <button id="back_right" class="button" onClick="load_page('loader_right','cabin','home')" alt="go back">
+                <p id="buttonText_goBack">Go Back</p>
+                <img src="img/back_arrow.png">
+            </button>
+        </div>
+
+        <button id="scrapbook" class="button_clear" onClick="load_page('loader_right','cabin','scrapbook_album')" alt="View Album"></button>
 
         <button id="violet" class="button_clear" alt="The Violet Quill"></button>
         <button id="black_cat" class="button_clear" alt="Black Cat Tavern"></button>
         <button id="donut" class="button_clear" alt="Cooper Do-nuts Riot"></button>
 
+    </div>
+    
+    <div class="scrapbook-album" id="scrapbook_album">
+    
+        <button id="prev_btn" class="flipbook-button">
+            <i class="fas fa-arrow-circle-left"></i>
+        </button>
+
+        <div id="book" class="book">
+            <div id="p1" class="paper">
+                <div class="front">
+                    <div id="f1" class="front-content">
+                        <br><br>
+                        <img src="img/scrapbook_frontCover.png">
+                        <h1>My Time at<br> <span class="red">C</span><span class="orange-red">a</span><span class="orange">m</span><span class="yellow">p</span> <span class="yellow-green">P</span><span class="green">r</span><span class="blue">i</span><span class="blue-violet">d</span><span class="purple">e</span> </h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b1" class="back-content">
+                        <div class="frame">
+                            <img src="img/mascot.png" alt="saved mascot">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="p2" class="paper">
+                <div class="front">
+                    <div id="f2" class="front-content">
+                        <h1>Saved Camp Pride's Mascot</h1>
+                        <p id="s1_savedMascot" class="scrapbook-content">Snuck into a rival camp, deciphered codes using Wolfram technologies, and rescued Camp Pride's mascot. Brimming with pride from this feat!</p>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b2" class="back-content">
+                        <h1>Back 2</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p3" class="paper">
+                <div class="front">
+                    <div id="f3" class="front-content">
+                        <h1>Front 3</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b3" class="back-content">
+                        <h1>Back 3</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p4" class="paper">
+                <div class="front">
+                    <div id="f4" class="front-content">
+                        <h1>Front 4</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b4" class="back-content">
+                        <h1>Back 4</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p5" class="paper">
+                <div class="front">
+                    <div id="f5" class="front-content">
+                        <h1>Front 5</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b5" class="back-content">
+                        <h1>Back 5</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p6" class="paper">
+                <div class="front">
+                    <div id="f6" class="front-content">
+                        <h1>Front 6</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b6" class="back-content">
+                        <h1>Back 6</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p7" class="paper">
+                <div class="front">
+                    <div id="f7" class="front-content">
+                        <h1>Front 7</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b7" class="back-content">
+                        <h1>Back 7</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p8" class="paper">
+                <div class="front">
+                    <div id="f8" class="front-content">
+                        <h1>Front 8</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b8" class="back-content">
+                        <h1>Back 8</h1>
+                    </div>
+                </div>
+            </div>
+            <div id="p9" class="paper">
+                <div class="front">
+                    <div id="f9" class="front-content">
+                        <h1>Front 9</h1>
+                    </div>
+                </div>
+                <div class="back">
+                    <div id="b9" class="back-content">
+                        <img src="img/scapbook_backCover.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="next_btn" class="flipbook-button">
+            <i class="fas fa-arrow-circle-right"></i>
+        </button>
+
+        <button id="back_right" class="button scrapbook-page" onClick="load_page('loader_right','scrapbook_album','cabin')" alt="go back">
+            <p id="buttonText_goBack">Go Back</p>
+            <img src="img/back_arrow.png">
+        </button>
 
     </div>
+    
     <div class="escape-room" id="escape_room">
         <h1>escape room</h1>
     </div>
@@ -54,7 +200,14 @@
         <h1>music</h1>
     </div>
     <div class="fireworks-celebration" id="fireworks_celebration">
-        <h1>fireworks</h1>
+        <canvas></canvas>
+        <div class="back-home">
+            <button id="back_left" class="button" onClick="load_page('loader_left','fireworks_celebration','home')" alt="go back">
+                <p id="buttonText_goBack">Go Back</p>
+                <img src="img/back_arrow.png">
+            </button>
+        </div>
+
     </div>
     <div class="campfire-chatroom" id="campfire_chatroom">
         <h1>campfire</h1>
